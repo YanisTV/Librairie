@@ -44,4 +44,11 @@ public class Main {
         System.out.println("0 - Quitter");
         System.out.print("Votre choix : ");
     }
+
+    private static void ajouterLivre() {
+        System.out.print("Entrez le titre du livre : ");
+        String titre = scanner.nextLine();
+        livres.add(new Livre(titre));
+        System.out.println("Livre ajouté avec succès.");
+    }
 }
