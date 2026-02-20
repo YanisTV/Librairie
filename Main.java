@@ -85,6 +85,12 @@ public class Main {
             } else {
                 System.out.println("Numéro invalide.");
             }
+        if (index >= 0 && index < livres.size()) {
+            livres.remove(index);
+            System.out.println("Livre supprimé avec succès.");
+        } else {
+            System.out.println("Numéro invalide.");
+        }
         }
     }
 
@@ -95,6 +101,11 @@ public class Main {
             System.out.println("\nListe des livres :");
             for (int i = 0; i < livres.size(); i++) {
                 System.out.println((i + 1) + " - " + livres.get(i).getTitre());
+            System.out.println("Aucun livre disponible.");
+        } else {
+            System.out.println("Liste des livres :");
+            for (int i = 0; i < livres.size(); i++) {
+                System.out.println((i + 1) + " - " + livres.get(i));
             }
         }
     }
