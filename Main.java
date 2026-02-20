@@ -1,3 +1,7 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
 
     private static ArrayList<Livre> livres = new ArrayList<>();
@@ -93,12 +97,6 @@ public class Main {
             } else {
                 System.out.println("Numéro invalide.");
             }
-        if (index >= 0 && index < livres.size()) {
-            livres.remove(index);
-            System.out.println("Livre supprimé avec succès.");
-        } else {
-            System.out.println("Numéro invalide.");
-        }
         }
     }
 }
