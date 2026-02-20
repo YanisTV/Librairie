@@ -51,19 +51,30 @@ public class Main {
         livres.add(new Livre(titre));
         System.out.println("Livre ajouté avec succès.");
     }
-}
-    private static void supprimerLivre() {
-listerLivres();
-if (!livres.isEmpty()) {
-System.out.print("Numéro du livre à supprimer : ");
-int index = scanner.nextInt() - 1;
 
-if (index >= 0 && index < livres.size()) {
-livres.remove(index);
-System.out.println("Livre supprimé avec succès.");
-} else {
-System.out.println("Numéro invalide.");
-}
-}
-}
+    private static void supprimerLivre() {
+        listerLivres();
+        if (!livres.isEmpty()) {
+            System.out.print("Numéro du livre à supprimer : ");
+            int index = scanner.nextInt() - 1;
+
+        if (index >= 0 && index < livres.size()) {
+            livres.remove(index);
+            System.out.println("Livre supprimé avec succès.");
+        } else {
+            System.out.println("Numéro invalide.");
+        }
+        }
+    }
+
+    private static void listerLivres() {
+        if (livres.isEmpty()) {
+            System.out.println("Aucun livre disponible.");
+        } else {
+            System.out.println("Liste des livres :");
+            for (int i = 0; i < livres.size(); i++) {
+                System.out.println((i + 1) + " - " + livres.get(i));
+            }
+        }
+    }
 }
