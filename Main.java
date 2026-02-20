@@ -52,3 +52,18 @@ public class Main {
         System.out.println("Livre ajouté avec succès.");
     }
 }
+    private static void supprimerLivre() {
+listerLivres();
+if (!livres.isEmpty()) {
+System.out.print("Numéro du livre à supprimer : ");
+int index = scanner.nextInt() - 1;
+
+if (index >= 0 && index < livres.size()) {
+livres.remove(index);
+System.out.println("Livre supprimé avec succès.");
+} else {
+System.out.println("Numéro invalide.");
+}
+}
+}
+}
