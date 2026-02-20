@@ -5,60 +5,44 @@ L’objectif principal du projet est de mettre en pratique l’utilisation de Gi
 
 Fonctionnalités
 
-Le programme permet de :
+**Le programme permet de :**
 
 Lister tous les livres
-
 Ajouter un nouveau livre
-
 Modifier un livre existant
-
 Supprimer un livre
-
 Quitter le programme
 
 Chaque livre contient au minimum un titre.
 
-Technologies utilisées :
-
-Langage : 
-
+**Langage :**
 Java
-
 Git
-
 GitHub
 
-Lancement du programme
+**Lancement du programme**
 
 Cloner le repository :
-
 git clone https://github.com/YanisTV/Librairie.git
 
 Se placer dans le dossier :
-
 cd Librairie
 
 Lancer le programme :
-
 Appuyer sur le bouton play
 
-Organisation du projet :
+
+**Organisation du projet :**
 
 Une branche par fonctionnalité
-
 Merge vers main après validation
-
 Commits avec messages explicites
-
 Kanban Board avec colonnes : Backlog / In progress / Done
 
-Membres du groupe :
+
+**Membres du groupe :**
 
 Kélian LEJEMBLE
-
 Matteo PROUST
-
 Yanis AMAND
-
 Laurent LEGUE
