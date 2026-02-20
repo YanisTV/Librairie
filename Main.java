@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
 
     private static ArrayList<Livre> livres = new ArrayList<>();
@@ -58,6 +61,30 @@ public class Main {
             System.out.print("Numéro du livre à supprimer : ");
             int index = scanner.nextInt() - 1;
 
+            if (index >= 0 && index < livres.size()) {
+                livres.remove(index);
+                System.out.println("Livre supprimé avec succès.");
+            } else {
+                System.out.println("Numéro invalide.");
+            }
+        }
+    }
+
+    private static void modifierLivre() {
+        listerLivres();
+        if (!livres.isEmpty()) {
+            System.out.print("Numéro du livre à modifier : ");
+            int index = scanner.nextInt() - 1;
+            scanner.nextLine();
+
+            if (index >= 0 && index < livres.size()) {
+                System.out.print("Nouveau titre : ");
+                String nouveauTitre = scanner.nextLine();
+                livres.get(index).setTitre(nouveauTitre);
+                System.out.println("Livre modifié avec succès.");
+            } else {
+                System.out.println("Numéro invalide.");
+            }
         if (index >= 0 && index < livres.size()) {
             livres.remove(index);
             System.out.println("Livre supprimé avec succès.");
@@ -69,6 +96,11 @@ public class Main {
 
     private static void listerLivres() {
         if (livres.isEmpty()) {
+            System.out.println("Aucun livre dans la librairie.");
+        } else {
+            System.out.println("\nListe des livres :");
+            for (int i = 0; i < livres.size(); i++) {
+                System.out.println((i + 1) + " - " + livres.get(i).getTitre());
             System.out.println("Aucun livre disponible.");
         } else {
             System.out.println("Liste des livres :");
